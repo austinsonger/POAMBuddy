@@ -1,0 +1,9 @@
+name: Upload New POAM
+
+uses: AnshPrakash/google-drive-upload-action@v0.1.3-alpha
+with:
+    client_id: ${{ secrets.CLIENT_ID }}
+    client_secret: ${{ secrets.CLIENT_SECRET }}
+    refresh_token: ${{ secrets.REFRESH_TOKEN }}
+    file-to-upload: 'file.txt'
+    upload-folder: 'some-folder-on-google-drive'
