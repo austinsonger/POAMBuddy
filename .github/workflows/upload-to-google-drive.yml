@@ -1,0 +1,30 @@
+name: Upload New POAM
+
+on:
+  push:
+  workflow_dispatch:
+      
+jobs:
+   uses: AnshPrakash/google-drive-upload-action@v0.1.3-alpha
+   with:
+     client_id: ${{ secrets.CLIENT_ID }}
+     client_secret: ${{ secrets.CLIENT_SECRET }}
+     refresh_token: ${{ secrets.REFRESH_TOKEN }}
+     file-to-upload: 'file.txt'
+     upload-folder: 'some-folder-on-google-drive'
+
+    build:
+       runs-on: ubuntu-latest
+
+steps:
+  - name: Get Time
+    id: time
+    uses: nanzm/get-time-action@master
+    with:
+      timeZone: UTC+8
+      format: 'YYYY-MM-DD-HH-mm-ss'
+  - name: Usage
+    env:
+      TIME: "${{ steps.time.outputs.time }}"
+    run: |
+      echo $TIME
