@@ -1,4 +1,4 @@
-# POAM Ally
+# POAM Ally [Not Product Ready] 
 
 - Pull Vulnerability and Flaw Data from vulnerability data source and then generates a POAM.
 
