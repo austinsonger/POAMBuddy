@@ -1,4 +1,4 @@
-# POAMBuddy [Not Product Ready] 
+# POAMBuddy [Not Production Ready]
 
 - Pull Vulnerability and Flaw Data from vulnerability data source and then generates a POAM.
 
